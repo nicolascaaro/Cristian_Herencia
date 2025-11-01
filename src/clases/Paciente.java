@@ -52,7 +52,6 @@ public class Paciente extends Persona {
         }
     }
 
-    // getters y setters
     public String getNumeroHistoria() { return numeroHistoria; }
     public void setNumeroHistoria(String numeroHistoria) { this.numeroHistoria = numeroHistoria; }
 }

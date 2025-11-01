@@ -36,7 +36,6 @@ public class Persona {
         System.out.println("Ciudad procedencia: " + ciudadProcedencia);
     }
 
-    // getters y setters
     public String getDni() { return dni; }
     public void setDni(String dni) { this.dni = dni; }
     public String getNombre() { return nombre; }

@@ -5,7 +5,7 @@ import java.util.*;
 public class ModeloDatos {
     private Map<String, Paciente> pacientes;
     private Map<String, EmpleadoEventual> eventuales;
-    private Map<String, EmpleadoPlanilla> planilla; // incluye medicos
+    private Map<String, EmpleadoPlanilla> planilla; 
     private Map<String, Medico> medicos;
     private List<CitaMedica> citas;
 
@@ -17,7 +17,6 @@ public class ModeloDatos {
         citas = new ArrayList<>();
     }
 
-    // Registro con validaciones simples (no duplicados)
     public void registrarPaciente(Paciente p) {
         if (p == null || p.getDni() == null || p.getDni().isEmpty()) {
             throw new RuntimeException("Paciente invalido");
@@ -55,7 +54,6 @@ public class ModeloDatos {
         if (medicos.containsKey(m.getDni()) || planilla.containsKey(m.getDni()) || eventuales.containsKey(m.getDni())) {
             throw new RuntimeException("Medico ya registrado con ese DNI: " + m.getDni());
         }
-        // guardar en medicos y en planilla (para que aparezca cuando se consulten empleados por planilla)
         medicos.put(m.getDni(), m);
         planilla.put(m.getDni(), m);
     }
@@ -79,7 +77,6 @@ public class ModeloDatos {
         citas.add(c);
     }
 
-    // Impresion con validaciones si no hay datos
     public void imprimirPacientes() {
         System.out.println("\n--- LISTA PACIENTES ---");
         if (pacientes.isEmpty()) {

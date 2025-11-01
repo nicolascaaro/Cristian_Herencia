@@ -41,7 +41,6 @@ public class Empleado extends Persona {
         System.out.println("Cargo: " + cargo);
     }
 
-    // getters y setters
     public String getCodigoEmpleado() { return codigoEmpleado; }
     public void setCodigoEmpleado(String codigoEmpleado) { this.codigoEmpleado = codigoEmpleado; }
     public double getHorasExtras() { return horasExtras; }
